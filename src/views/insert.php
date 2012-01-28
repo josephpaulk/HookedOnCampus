@@ -6,7 +6,7 @@
 </head>
 <body>
 
-    <form action="insert.php" method="post">
+    <form action="./controllers/insert.php" method="post">
         First Name: <input type="text" name="first"><br>
         Last Name: <input type="text" name="last"><br>
         Phone: <input type="text" name="phone"><br>
