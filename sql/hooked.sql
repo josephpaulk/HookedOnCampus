@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jan 28, 2012 at 09:34 PM
+-- Generation Time: Jan 28, 2012 at 11:31 PM
 -- Server version: 5.5.20
 -- PHP Version: 5.3.9
 
@@ -78,7 +78,15 @@ CREATE TABLE IF NOT EXISTS `faculty` (
   `id` int(8) NOT NULL AUTO_INCREMENT,
   `department` varchar(20) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+
+--
+-- Dumping data for table `faculty`
+--
+
+INSERT INTO `faculty` (`id`, `department`) VALUES
+(1, 'science'),
+(2, 'arts');
 
 -- --------------------------------------------------------
 
@@ -182,8 +190,8 @@ CREATE TABLE IF NOT EXISTS `userattributes` (
 -- Constraints for table `message`
 --
 ALTER TABLE `message`
-  ADD CONSTRAINT `message_ibfk_2` FOREIGN KEY (`sender_id`) REFERENCES `user` (`id`),
-  ADD CONSTRAINT `message_ibfk_1` FOREIGN KEY (`receiver_id`) REFERENCES `user` (`id`);
+  ADD CONSTRAINT `message_ibfk_1` FOREIGN KEY (`receiver_id`) REFERENCES `user` (`id`),
+  ADD CONSTRAINT `message_ibfk_2` FOREIGN KEY (`sender_id`) REFERENCES `user` (`id`);
 
 --
 -- Constraints for table `user`
@@ -195,10 +203,10 @@ ALTER TABLE `user`
 -- Constraints for table `userattributes`
 --
 ALTER TABLE `userattributes`
-  ADD CONSTRAINT `userattributes_ibfk_6` FOREIGN KEY (`ethnicity_id`) REFERENCES `ethnicity` (`id`) ON UPDATE CASCADE,
   ADD CONSTRAINT `userattributes_ibfk_3` FOREIGN KEY (`height_id`) REFERENCES `height` (`id`) ON UPDATE CASCADE,
   ADD CONSTRAINT `userattributes_ibfk_4` FOREIGN KEY (`hair_colour_id`) REFERENCES `haircolour` (`id`) ON UPDATE CASCADE,
-  ADD CONSTRAINT `userattributes_ibfk_5` FOREIGN KEY (`bodytype_id`) REFERENCES `bodytype` (`id`) ON UPDATE CASCADE;
+  ADD CONSTRAINT `userattributes_ibfk_5` FOREIGN KEY (`bodytype_id`) REFERENCES `bodytype` (`id`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `userattributes_ibfk_6` FOREIGN KEY (`ethnicity_id`) REFERENCES `ethnicity` (`id`) ON UPDATE CASCADE;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
