@@ -1,12 +1,39 @@
 #header {
-	background-color: #045F32;
+	background-color: #1E1E1E;
+	padding: 2em 6em 2em 6em;
 }
 
 #header h1 {
-	font-size: 3em;
+	color: #C81414;
+	font-size: 2em;
 	display: inline;
 }
 
 #header #login {
-	background-color: #045F32;
+	background-color: #1E1E1E;
+	float: right;
+}
+
+#signup {
+	padding: 2em 6em 2em 6em;
+	background-color: #1E1E1E;
+	width:auto;
+	height:20%;
+}
+
+#signup #signup-left {
+	float:left;
+	width: 50%;
+	background:blue;
+}
+
+#signup #signup-right {
+	float:left;
+	width: 50%;
+	display:inline;
+	background:red;
+}
+
+#signup #signup-left h1 {
+	font-size: 2em;
 }

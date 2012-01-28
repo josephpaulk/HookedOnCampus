@@ -7,10 +7,8 @@
     <body>
         <div id="login">
             <form action="insert.php" method="post">
-                Email:
-                <input type="text" name="email">
-                Password:
-                <input type="text" name="password">
+                <input type="text" value="@ualberta.ca Email" name="email">
+                <input type="text" value="Password" name="password">
                 <input type="Submit">
             </form>
         </div>

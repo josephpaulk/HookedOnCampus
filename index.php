@@ -23,25 +23,25 @@ $command = array_values($requestURI);
 <html>
     <head>
         <!-- CSS -->
-        <link rel="stylesheet" type="text/css" href="/src/css/reset.css" />
-        <link rel="stylesheet" type="text/css" href="/src/css/main.css" />
+        <link rel="stylesheet" type="text/css" href="src/css/reset.css" />
+        <link rel="stylesheet" type="text/css" href="src/css/main.css" />
         <!-- /CSS -->
         <title>HookedOnCampus</title>
     </head>
     <body>
         <?php
-		include ("/src/header.php");
+		include ('./src/header.php');
 
 		switch($command[0]) {
 			case 'login' :
-				print('You want the login page');
+				include ('./src/views/signup.php');
 				break;
 			default :
 				print('404 Redirect');
 				break;
 		}
 
-		include ("/src/footer.php");
+		include ('./src/footer.php');
         ?>
     </body>
 </html>
