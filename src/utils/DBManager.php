@@ -10,17 +10,6 @@
     $password="password";
     $database="database";
 
-
-
-//    $query= "CREATE TABLE contacts (id int(6) NOT NULL auto_increment, " +
-//            "first varchar(15) NOT NULL,last varchar(15) NOT NULL, " +
-//            "phone varchar(20) NOT NULL,mobile varchar(20) NOT NULL," +
-//            "fax varchar(20) NOT NULL,email varchar(30) NOT NULL," +
-//            "web varchar(30) NOT NULL,PRIMARY KEY (id),UNIQUE id (id),KEY id_2 (id))";
-//
-//    mysql_query($query);
-    mysql_close();
-
     /**
      * Opens a new db connection.
      */
@@ -99,13 +88,19 @@
         }
 
 
-        $query = "INSERT INTO '$tableName' VALUES ('',"; //"'$first','$last','$phone','$mobile','$fax','$email','$web')";
+        $query = "INSERT INTO $tableName VALUES ('',";
+
+        $i = 0;
+        $count = sizeof($values);
 
         //values must be in proper order as in table, first value is null for auto assigned id
-        foreach($values as $value)
+        foreach($values as $value=>$key)
         {
 
-            $query . "'$value,'";
+            if($i < $count - 1)
+                $query . "";
+            else
+                $query . $key . " = " . $value;
 
         }
 
@@ -119,25 +114,60 @@
      * @param $tableName - name of table to delete value from
      * @param $values   - as an associative array. ex) $values["username"] = "joe";
      */
-    function delete($tableName, $values)
+    function delete($tableName, $id)
     {
 
         open();
 
-        $query = "DELETE FROM '$tableName' WHERE "
+        $query = "DELETE FROM $tableName WHERE 'id' = $id;";
 
+        mysql_query($query);
 
-        //TODO: Needs work, have to add optional condition "AND" condition
-        foreach($values as $key=>$value)
+        mysql_close();
+
+    }
+
+    /**
+     * @param $tablename - name of table id is in
+     * @param $id   - id to update on
+     * @param $values - associative array of values ex) $values["age"] = 17;
+     */
+    function update($tablename, $id, $values)
+    {
+
+        open();
+
+        foreach($values as $value)
         {
 
-            $query . "'$key' = '$key'";
+            $values[$value] = $_POST[$value];
 
         }
 
-        mysql_query("DELETE FROM Persons WHERE LastName='Griffin'");
+        /*UPDATE table_name
+        SET column1=value, column2=value2,...
+        WHERE some_column=some_value */
 
-        mysql_close($con);
+        $query = "UPDATE $tablename SET ";
+
+        $i = 0;
+        $count = sizeof($values);
+
+        foreach($values as $key=>$value)
+        {
+
+            if($i < $count - 1)
+                $query . $key . " = " . $value . ",";
+            else
+                $query . $key . " = " . $value;
+
+        }
+
+        $query . " WHERE 'id' = $id);";
+
+        mysql_query($query);
+
+        mysql_close();
 
     }
 
