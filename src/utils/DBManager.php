@@ -14,9 +14,9 @@
     function open()
     {
 
-        $user="username";
-        $password="password";
-        $database="database";
+        $user="cq7753_test";
+        $password="gamejam";
+        $database="cq7753_hooked";
 
         mysql_connect(localhost,$user,$password);
         @mysql_select_db($database) or die( "Unable to select database");
