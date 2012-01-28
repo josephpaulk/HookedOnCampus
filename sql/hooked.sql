@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jan 28, 2012 at 07:31 PM
+-- Generation Time: Jan 28, 2012 at 08:58 PM
 -- Server version: 5.5.20
 -- PHP Version: 5.3.9
 
@@ -30,7 +30,18 @@ CREATE TABLE IF NOT EXISTS `bodytype` (
   `id` int(8) NOT NULL AUTO_INCREMENT,
   `type` varchar(16) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
+
+--
+-- Dumping data for table `bodytype`
+--
+
+INSERT INTO `bodytype` (`id`, `type`) VALUES
+(1, 'Thin'),
+(2, 'Athletic'),
+(3, 'Average'),
+(4, 'Above Average'),
+(5, 'Big/Tall/BBW');
 
 -- --------------------------------------------------------
 
@@ -41,6 +52,31 @@ CREATE TABLE IF NOT EXISTS `bodytype` (
 CREATE TABLE IF NOT EXISTS `ethnicity` (
   `id` int(8) NOT NULL AUTO_INCREMENT,
   `type` varchar(16) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
+
+--
+-- Dumping data for table `ethnicity`
+--
+
+INSERT INTO `ethnicity` (`id`, `type`) VALUES
+(1, 'African American'),
+(2, 'Asian'),
+(3, 'Caucasian'),
+(4, 'Hispanic'),
+(5, 'Middle Eastern'),
+(6, 'Native American'),
+(7, 'Other');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `faculty`
+--
+
+CREATE TABLE IF NOT EXISTS `faculty` (
+  `id` int(8) NOT NULL AUTO_INCREMENT,
+  `department` varchar(20) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
@@ -54,7 +90,20 @@ CREATE TABLE IF NOT EXISTS `haircolour` (
   `id` int(8) NOT NULL AUTO_INCREMENT,
   `type` varchar(10) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
+
+--
+-- Dumping data for table `haircolour`
+--
+
+INSERT INTO `haircolour` (`id`, `type`) VALUES
+(1, 'Blonde'),
+(2, 'Brown'),
+(3, 'Red'),
+(4, 'Black'),
+(5, 'Grey'),
+(6, 'Bald'),
+(7, 'Mixed');
 
 -- --------------------------------------------------------
 
@@ -92,9 +141,10 @@ CREATE TABLE IF NOT EXISTS `message` (
 
 CREATE TABLE IF NOT EXISTS `user` (
   `id` int(16) NOT NULL AUTO_INCREMENT,
-  `username` varchar(20) NOT NULL,
+  `firstname` varchar(20) NOT NULL,
   `email` varchar(40) NOT NULL,
   `password` varchar(16) NOT NULL,
+  `faculty_id` int(8) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
@@ -110,7 +160,7 @@ CREATE TABLE IF NOT EXISTS `userattributes` (
   `gender` int(11) NOT NULL,
   `height_id` int(11) NOT NULL,
   `hair_colour_id` int(11) NOT NULL,
-  `orientation` int(11) NOT NULL,
+  `orientation` int(11) NOT NULL COMMENT 'Straight, Bi-Sexual, Gay',
   `bodytype_id` int(11) NOT NULL,
   `birthdate` int(11) NOT NULL,
   `ethnicity_id` int(11) NOT NULL,
