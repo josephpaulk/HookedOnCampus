@@ -5,6 +5,7 @@
 	<projects>
 	</projects>
 	<buildSpec>
+<<<<<<< HEAD
 		<buildCommand>
 			<name>com.aptana.editor.php.aptanaPhpBuilder</name>
 			<arguments>
@@ -18,5 +19,9 @@
 	</buildSpec>
 	<natures>
 		<nature>com.aptana.editor.php.phpNature</nature>
+=======
+	</buildSpec>
+	<natures>
+>>>>>>> origin/master
 	</natures>
 </projectDescription>
