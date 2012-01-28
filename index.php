@@ -19,12 +19,9 @@
         case '':
             print('homepage');
             break;
-    	case 'login' :
+    	case 'signup' :
     		include ('./src/views/signup.php');
     		break;
-        case 'signup' :
-            print('You want to sign up');
-            break;
         case 'profile' :
             include('./src/controllers/viewProfile.php');
             break;
