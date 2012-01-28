@@ -6,15 +6,17 @@
  */
 
 
-    $user="username";
-    $password="password";
-    $database="database";
+
 
     /**
      * Opens a new db connection.
      */
     function open()
     {
+
+        $user="username";
+        $password="password";
+        $database="database";
 
         mysql_connect(localhost,$user,$password);
         @mysql_select_db($database) or die( "Unable to select database");
@@ -98,9 +100,9 @@
         {
 
             if($i < $count - 1)
-                $query . "";
+                $query . "'$key',";
             else
-                $query . $key . " = " . $value;
+                $query . "'$key');";
 
         }
 
