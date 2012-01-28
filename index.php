@@ -16,6 +16,9 @@
     include ('./src/header.php');
     
     switch($command[0]) {
+        case '':
+            print('homepage');
+            break;
     	case 'login' :
     		include ('./src/views/signup.php');
     		break;
