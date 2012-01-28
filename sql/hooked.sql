@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jan 28, 2012 at 08:58 PM
+-- Generation Time: Jan 28, 2012 at 09:34 PM
 -- Server version: 5.5.20
 -- PHP Version: 5.3.9
 
@@ -130,7 +130,9 @@ CREATE TABLE IF NOT EXISTS `message` (
   `message` text NOT NULL,
   `read` tinyint(1) NOT NULL,
   `sent` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `sendex` (`sender_id`),
+  UNIQUE KEY `recex` (`receiver_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
@@ -144,8 +146,9 @@ CREATE TABLE IF NOT EXISTS `user` (
   `firstname` varchar(20) NOT NULL,
   `email` varchar(40) NOT NULL,
   `password` varchar(16) NOT NULL,
-  `faculty_id` int(8) NOT NULL,
-  PRIMARY KEY (`id`)
+  `faculty_id` int(8) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `faculty` (`faculty_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
@@ -164,8 +167,38 @@ CREATE TABLE IF NOT EXISTS `userattributes` (
   `bodytype_id` int(11) NOT NULL,
   `birthdate` int(11) NOT NULL,
   `ethnicity_id` int(11) NOT NULL,
-  PRIMARY KEY (`user_id`)
+  PRIMARY KEY (`user_id`),
+  KEY `heightindex` (`height_id`),
+  KEY `hairindex` (`hair_colour_id`),
+  KEY `bodyindex` (`bodytype_id`),
+  KEY `ethnicityindex` (`ethnicity_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `message`
+--
+ALTER TABLE `message`
+  ADD CONSTRAINT `message_ibfk_2` FOREIGN KEY (`sender_id`) REFERENCES `user` (`id`),
+  ADD CONSTRAINT `message_ibfk_1` FOREIGN KEY (`receiver_id`) REFERENCES `user` (`id`);
+
+--
+-- Constraints for table `user`
+--
+ALTER TABLE `user`
+  ADD CONSTRAINT `user_ibfk_1` FOREIGN KEY (`faculty_id`) REFERENCES `faculty` (`id`) ON DELETE SET NULL ON UPDATE CASCADE;
+
+--
+-- Constraints for table `userattributes`
+--
+ALTER TABLE `userattributes`
+  ADD CONSTRAINT `userattributes_ibfk_6` FOREIGN KEY (`ethnicity_id`) REFERENCES `ethnicity` (`id`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `userattributes_ibfk_3` FOREIGN KEY (`height_id`) REFERENCES `height` (`id`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `userattributes_ibfk_4` FOREIGN KEY (`hair_colour_id`) REFERENCES `haircolour` (`id`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `userattributes_ibfk_5` FOREIGN KEY (`bodytype_id`) REFERENCES `bodytype` (`id`) ON UPDATE CASCADE;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
