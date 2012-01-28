@@ -80,11 +80,11 @@
     }
 
     /**
-     * @param $table - name of table inserting into in string form. ex) $table = "users";
+     * @param $tableName - name of table inserting into in string form. ex) $table = "users";
      * @param $cols - array of strings containing the names of the columns we are inserting into,
      *                column names in db tables must match the "name" value in: <input type="text" name="first">
      */
-    function insert($table, $cols)
+    function insert($tableName, $cols)
     {
 
         open();
@@ -99,7 +99,7 @@
         }
 
 
-        $query = "INSERT INTO '$table' VALUES ('',"; //"'$first','$last','$phone','$mobile','$fax','$email','$web')";
+        $query = "INSERT INTO '$tableName' VALUES ('',"; //"'$first','$last','$phone','$mobile','$fax','$email','$web')";
 
         //values must be in proper order as in table, first value is null for auto assigned id
         foreach($values as $value)
@@ -112,6 +112,32 @@
             mysql_query($query);
 
             mysql_close();
+
+    }
+
+    /**
+     * @param $tableName - name of table to delete value from
+     * @param $values   - as an associative array. ex) $values["username"] = "joe";
+     */
+    function delete($tableName, $values)
+    {
+
+        open();
+
+        $query = "DELETE FROM '$tableName' WHERE "
+
+
+        //TODO: Needs work, have to add optional condition "AND" condition
+        foreach($values as $key=>$value)
+        {
+
+            $query . "'$key' = '$key'";
+
+        }
+
+        mysql_query("DELETE FROM Persons WHERE LastName='Griffin'");
+
+        mysql_close($con);
 
     }
 
