@@ -5,7 +5,7 @@
  * Time: 9:14 AM
  */
 
-    include("./utils/DBManager.php");
+    /*include("./utils/DBManager.php");
 
     //get user id from update form
     $id=$_GET['id'];
@@ -31,6 +31,8 @@
     $statement . "FROM users" +
                  "WHERE id = '$id' );";
 
-    $results = select($statement, $atts);
+    $results = select($statement, $atts);*/
 
-    include("./views/viewProfile.php");
+    include("./src/views/profile.php");
+    
+ ?>
