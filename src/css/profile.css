@@ -1,11 +1,19 @@
 #profile {
 	color: #FFFFFF;
-	background: #000000;
+	background: #FFFFFF;
+	background-image: url('../images/background-gradient.jpg');
+	background-repeat: repeat-x;
 	padding-left: 30em;
 	height: 400px;
 }
 #profile #menu {
-	float: right;
+	background-color: #FFFFFF;
+	-moz-border-radius: 20px;
+	-webkit-border-radius: 20px;
+	-khtml-border-radius: 20px;
+	border-radius: 20px;
+	padding: 1em;
+	float: left;
 	border-bottom: 1px solid gray;
 	width: 200px;
 }
@@ -14,7 +22,6 @@
 	list-style: none;
 	margin: 0;
 	padding: 0.25em;
-	border-top: 1px solid gray;
 	text-decoration: none;
 }
 #profile #menu a {
@@ -86,4 +93,12 @@
 	);/* Saf4+, Chrome */
 	filter: progid :DXImageTransform.Microsoft.gradient(startColorStr='#33FFFFFF', EndColorStr='#19FFFFFF'); /* IE6,IE7 */
 	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#33FFFFFF', EndColorStr='#19FFFFFF')"; /* IE8 */
+}
+#edit {
+	background-color: #FFFFFF;
+	-moz-border-radius: 20px;
+	-webkit-border-radius: 20px;
+	-khtml-border-radius: 20px;
+	border-radius: 20px;
+	padding: 1em;
 }
