@@ -2,9 +2,8 @@
 function viewProfile($id, $db)
 {
 ?>
-
-<div id='name'>
-    
+<div id="viewProfile">
+	
 </div>
 <?php        
 }

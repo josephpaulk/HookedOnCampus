@@ -1,13 +1,18 @@
 <?php
 require_once './src/views/profile_view.php';
+require_once './src/utils/db.php';
 
 include ('./src/header.php');
 
     
 $pid = $_GET['id'];
-$action = $_GET['action'];
+if(isset($_GET['action']))
+	$action = $_GET['action'];
+else {
+	$action="";
+}
 
-
+$db = new DB();
 switch($action)
 {
     case 'edit':

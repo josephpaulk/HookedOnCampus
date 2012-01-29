@@ -1,15 +1,15 @@
 #header {
-	background-color: #1E1E1E;
-	background-image: url('../../banner_bg.png');
-	background-size: 100% 100%;
+	background-color: #646464;
 	padding: 2em 6em 2em 6em;
+	border-bottom: 0.1em solid #F52887;
 }
 #header h1 {
-	color: #F6358A;
-	font-size: 2em;
+	color: #F52887;
+	font-size: 2.5em;
 	float: left;
 	width: 50%;
 	display: inline;
+	font-family: 'Lobster', Georgia, Times, serif;
 }
 #header #login {
 	text-align: right;
@@ -22,19 +22,19 @@
 	padding: 0.4em;
 	color: #646464;
 }
-#header #login input:focus { 
-    outline:none;
-    border-color:#9ecaed;
-    box-shadow:0 0 10px #9ecaed;
+#header #login input:focus {
+	outline: none;
+	border-color: #9ecaed;
+	box-shadow: 0 0 10px #9ecaed;
 }
-
 #signup {
 	padding: 2em 6em 2em 6em;
 	background-color: #000000;
+	background-image: url('../../heart_bkg.png');
 	background-position: center;
-	background-repeat: no-repeat;
+	background-repeat: repeat-x;
 	width: auto;
-	height: 50%;
+	height: 300px;
 }
 #signup #signup-left {
 	float: left;
@@ -60,9 +60,7 @@
 	color: #FFFFFF;
 }
 #footer {
-	background-image: url('../../banner_bg2.png');
-	background-color: #464746;
-	background-repeat: repeat-x;
-	background-size: 100% 10%;
+	border-top: 0.1em solid #F52887;
+	background-color: #646464;
 	height: 100%;
 }
