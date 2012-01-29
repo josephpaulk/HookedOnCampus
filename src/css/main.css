@@ -1,6 +1,7 @@
 #header {
 	background-color: #646464;
 	padding: 2em 6em 2em 6em;
+	border-bottom: 0.1em solid #F52887;
 }
 #header h1 {
 	color: #F52887;
@@ -59,6 +60,7 @@
 	color: #FFFFFF;
 }
 #footer {
+	border-top: 0.1em solid #F52887;
 	background-color: #646464;
 	height: 100%;
 }
