@@ -1,9 +1,20 @@
 <?php
+function search_results($res, $db)
+{
+	$row = $db->db_fetch($res);
+
+		while($row)
+		{
+				echo '<h1>'.$row['user_id'].'</h1>';
+			 $row = $db->db_fetch($res);
+		}
+
+}
 function search_form()
     {
         
 ?>
-            <form action="./src/controllers/search_controller.php?action=add" method="post">
+            <form action="./src/controllers/search_controller.php" method="post">
 			Search for a(n): 
             <select name="bodytype">
                 <?php //foreach(SELECT)?>
@@ -59,6 +70,4 @@ function search_form()
     
     <?php
 }
-
-
 ?>
