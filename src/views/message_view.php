@@ -61,4 +61,14 @@ function viewMessage($pid, $db)
 	}
 }
 
+
+function sendMessage($src, $dest)
+{
+    echo "<form action='./src/controllers/message_controller.php' method='POST'>";
+    echo "<input type='textarea' name='mess' />";
+    echo "<input type='hidden' name='recv' value='".$dest."' />";
+    echo "<input type='hidden' name='send' value='".$src."' />";
+    echo "<input type='submit' value='Send' />";
+    echo "</form>";
+}
 ?>

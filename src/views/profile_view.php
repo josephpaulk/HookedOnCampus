@@ -1,4 +1,5 @@
 <?php
+require_once 'message_view.php';
 function viewProfile($id, $db)
 {
     $query = "select * from user u , userattributes ua where u.id='" . $id . "' and u.id = ua.user_id;";
@@ -23,9 +24,12 @@ function viewProfile($id, $db)
     if($entry['height_id'] == 1) { $height = "Short"; } else if($entry['height_id'] == 2) { $height = "Average height"; } else { $height = "Tall"; }
     echo '<p>About '.$entry['firstname'].' <br>'.$entry['firstname'].' is in '.$fac['department'].' and '.$gender.' is '.$height.' </p>';
     echo '</div>';
+     if( !is_user($id) )
+     {
+        sendMessage($_SESSION['id'], $id);  
+     }
     
-    if( is_user($id) )
-    {
+   
         echo "<div id='menu'>";
         echo "<ul>";
         echo "<li><a href=''>Edit Profile</a></li>";
@@ -36,7 +40,7 @@ function viewProfile($id, $db)
         echo "</ul>";
         echo "</div>";
         
-    }
+    
             
     echo "</div>";
     
