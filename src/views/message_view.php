@@ -1,4 +1,7 @@
 <?php
+
+require_once '/src/controllers/message_controller.php';
+
 function viewMessage($id, $db)
 {
 ?>
@@ -12,6 +15,13 @@ function viewMessage($id, $db)
 
 </script>
 <div id="messages" class="dialog-modal">
+	<?php
+	while ($results)
+	{
+		echo '<h1>'.$results['user_id'].'</h1>';
+		$results = $db->$db_fetch($res);
+	}
+	?>
 	<div class="message">
 		<p>Sender</p>
 		<p>Receiver</p>
