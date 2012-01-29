@@ -1,16 +1,31 @@
 #profile {
-	width: auto;
-	height: 400px;
+	color: #FFFFFF;
+	background: #000000;
 	padding-left: 30em;
 	padding-right: 30em;
-	padding-top: 2em;
+	height: 400px;
+}
+#profile #menu {
+	float: right;
+	padding-left: 0;
+	margin-left: 0;
+	border-bottom: 1px solid gray;
+	width: 200px;
+}
+#profile #menu a {
+	list-style: none;
+	margin: 0;
+	padding: 0.25em;
+	border-top: 1px solid gray;
+	text-decoration: none;
+}
+#profile p {
+	width: auto;
 }
 #profile h1 {
-	display: inline;
 	font-size: 3em;
 }
 #profile h2 {
-	display: inline;
 }
 #profile img {
 	width: 15em;
