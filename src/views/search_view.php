@@ -1,28 +1,27 @@
 <?php
+
 function search_results($res, $db)
 {
 
     //fetch first result
 	if($res)
     {
-        echo  mysql_num_rows($res) . 'results returned by search.';
+        //echo  mysql_num_rows($res) . ' results returned by search.';
         $row = $db->db_fetch($res);
-    }
-    else
-        echo 'No Results Returned by Search'; ?>
 
-    <div id="results">
+
+    ?> <div id="results">
     	</div>
 
         <?php //if first result not null and row is not null, loop through all results
-	    while($row)
+	    while($row != 0)
 		{
-            $id = $row['id'];
+            $id = $row['user_id'];
 
             $query = "select * from user u , userattributes ua where u.id='" . $id . "' and u.id = ua.user_id;";
                                                                 //" and ua.faculty_id = f.id";
 
-            $res = $db->query($query);
+            $res = $db->db_query($query);
             $result = $db->db_fetch($res);
 
             ?><div class="search-result">
@@ -48,6 +47,10 @@ function search_results($res, $db)
 
 			 <?php $row = $db->db_fetch($res);
 		}
+
+    }
+        else
+            echo 'No Results Returned by Search';
 
 }
 

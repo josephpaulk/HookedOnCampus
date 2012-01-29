@@ -28,43 +28,42 @@
     $db->sanitize($hair);
 	$db->sanitize($height);
     
-	$query = 'SELECT user_id FROM userattributes WHERE (';
-	$first = 0;
+	$query = 'SELECT user_id FROM userattributes WHERE ';
+	$first = 1;
 	if($bodytype){
 		if($first){
-			$first = 1;
+			$first = 0;
 		} else {
 			$query.=',';
 		}	
-		$query.='bodytype_id = '.$bodytype;
+		$query.='bodytype_id = '. "'$bodytype'";
 	}
 	if($ethnicity){
 		if($first){
-			$first = 1;
+			$first = 0;
 		} else {
 			$query.=',';
 		}	
-		$query.='ethnicity_id = '.$ethnicity;
+		$query.='ethnicity_id = '. "'$ethnicity'";
 	}
 	if($hair){
 		if($first){
-			$first = 1;
+			$first = 0;
 		} else {
 			$query.=',';
 		}	
-		$query.='hair_colour_id = '.$hair;
+		$query.='hair_colour_id = '. "'$hair'";
 	}
 	if($height){
 		if($first){
-			$first = 1;
+			$first = 0;
 		} else {
 			$query.=',';
 		}	
-		$query.='height_id = '.$height;
+		$query.='height_id = '. "'$height'";
 	}
-	$query.=')';
+	$query.=';';
 
-	
 	
     $res = $db->db_query($query);
 
