@@ -17,8 +17,8 @@
     $bodytype = $_POST['bodytype'];
 	$ethnicity = $_POST['ethnicity'];
 	$faculty = $_POST['faculty'];
-	$faculty = $_POST['hair'];
-	$faculty = $_POST['height'];
+	$hair = $_POST['hair'];
+	$height = $_POST['height'];
 
     
     $db->sanitize($bodytype);
@@ -41,7 +41,7 @@
 		if($first){
 			$first = 1;
 		} else {
-			$query.=','
+			$query.=',';
 		}	
 		$query.='ethnicity_id = '.$ethnicity;
 	}
@@ -63,10 +63,13 @@
 	}
 	$query.=')';
 
-    //$res = $db->db_query($query);
+	
+	
+    $res = $db->db_query($query);
     
     //$entry = $db->db_fetch($res);
-    
+    //echo $entry;
+	echo $res;
     
     //$redir = 'Location:../../profile.php?id='.$entry['user_id'];
       //echo $redir;

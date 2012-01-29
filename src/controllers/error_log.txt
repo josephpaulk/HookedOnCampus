@@ -1,14 +1,3 @@
-
-[29-Jan-2012 05:41:15] PHP Warning:  mysql_connect() [<a href='function.mysql-connect'>function.mysql-connect</a>]: Access denied for user 'tori'@'localhost' (using password: YES) in C:\wamp\www\HookedOnCampus\src\utils\db.php on line 21
-[29-Jan-2012 05:41:15] PHP Stack trace:
-[29-Jan-2012 05:41:15] PHP   1. {main}() C:\wamp\www\HookedOnCampus\src\controllers\signup_controller.php:0
-[29-Jan-2012 05:41:15] PHP   2. DB->__construct() C:\wamp\www\HookedOnCampus\src\controllers\signup_controller.php:14
-[29-Jan-2012 05:41:15] PHP   3. DB->connect() C:\wamp\www\HookedOnCampus\src\utils\db.php:10
-[29-Jan-2012 05:41:15] PHP   4. mysql_connect() C:\wamp\www\HookedOnCampus\src\utils\db.php:21
-[29-Jan-2012 05:41:15] PHP Warning:  mysql_close(): no MySQL-Link resource supplied in C:\wamp\www\HookedOnCampus\src\utils\db.php on line 15
-[29-Jan-2012 05:41:15] PHP Stack trace:
-[29-Jan-2012 05:41:15] PHP   1. {main}() C:\wamp\www\HookedOnCampus\src\controllers\signup_controller.php:0
-[29-Jan-2012 05:41:15] PHP   2. DB->__construct() C:\wamp\www\HookedOnCampus\src\controllers\signup_controller.php:14
-[29-Jan-2012 05:41:15] PHP   3. DB->connect() C:\wamp\www\HookedOnCampus\src\utils\db.php:10
-[29-Jan-2012 05:41:15] PHP   4. DB->__destruct() C:\wamp\www\HookedOnCampus\src\utils\db.php:0
-[29-Jan-2012 05:41:15] PHP   5. mysql_close() C:\wamp\www\HookedOnCampus\src\utils\db.php:15
+[29-Jan-2012 01:36:46] PHP Fatal error:  Class 'DB' not found in /Users/peter/Documents/C410/HookedOnCampus/src/controllers/profile_controller.php on line 8
+[29-Jan-2012 01:37:15] PHP Notice:  Undefined variable: id in /Users/peter/Documents/C410/HookedOnCampus/src/controllers/profile_controller.php on line 15
+[29-Jan-2012 01:37:15] PHP Notice:  Undefined variable: query2 in /Users/peter/Documents/C410/HookedOnCampus/src/controllers/profile_controller.php on line 25
