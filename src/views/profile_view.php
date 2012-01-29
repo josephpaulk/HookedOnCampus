@@ -22,10 +22,12 @@ function viewProfile($id, $db)
     if( is_user($id) )
     {
         echo "<div id='menu'>";
-        echo "<a href=''>Messages</a> | ";
-        echo "<a href=''>Matches</a> | ";
-        echo "<a href=''>Search</a> | ";
-        echo "<a href='../views/logout.php'>Logout</a>";
+        echo "<ul>";
+        echo "<li><a href=''>Messages</a></li>";
+        echo "<li><a href=''>Matches</a></li>";
+        echo "<li><a href='search.php'>Search</a></li>";
+        echo "<li><a href='../views/logout.php'>Logout</a></li>";
+        echo "</ul>";
         echo "</div>";
         
     }
