@@ -3,13 +3,19 @@ function search_results($res, $db)
 {
 
     //fetch first result
-	$row = $db->db_fetch($res); ?>
+	if($res)
+    {
+        echo  mysql_num_rows($res) . 'results returned by search.';
+        $row = $db->db_fetch($res);
+    }
+    else
+        echo 'No Results Returned by Search'; ?>
 
     <div id="results">
     	</div>
 
-        //if first result not null and row is not null, loop through all results
-		<?php while($row)
+        <?php //if first result not null and row is not null, loop through all results
+	    while($row)
 		{
             $id = $row['id'];
 

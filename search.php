@@ -1,43 +1,33 @@
 <?php
 
-//login stuff
-    session_start();
+    //require_once './src/utils/auth.php';
 
-    if(!isset($_SESSION['auth']))
-        $_SESSION['auth'] = false;
+    //is_auth();
 
+    require_once './src/utils/db.php';
 
+    include ('./src/header.php');
     require_once './src/views/search_view.php';
-    
-    include('./src/header.php');
-    
-    search_form();
-   
+
+    $pid = $_GET['id'];
+    if(isset($_GET['action']))
+    	$action = $_GET['action'];
+    else {
+    	$action="";
+    }
+
+    $db = new DB();
+    switch($action)
+    {
+    	/*case 'results':
+    		viewMessage($pid, $db);
+    		break;*/
+        default:
+            search_form();
+            break;
+
+    }
+
     include('./src/footer.php');
-	
-/* OLD CODE
-require_once './src/views/search_view.php';
-require_once './src/utils/db.php';
 
-include ('./src/header.php');
-
-$action = $_GET['action'];
-
-$db = new DB();
-$pid = "";
-
-switch($action)
-{
-    case 'edit':
-        editSearch($pid, $db);
-        break;
-    default:
-        viewSearch($pid, $db);
-        break;
-
-}
-
-include ('./src/footer.php');
-
-*/
 ?>

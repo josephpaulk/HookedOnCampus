@@ -10,6 +10,7 @@
     error_reporting(E_ALL); 
 
     require_once '../utils/db.php';
+    require_once '../views/search_view.php';
 
     $db = new DB();
     
@@ -66,13 +67,7 @@
 	
 	
     $res = $db->db_query($query);
-    
-    //$entry = $db->db_fetch($res);
-    //echo $entry;
-	echo $res;
-    
-    //$redir = 'Location:../../profile.php?id='.$entry['user_id'];
-      //echo $redir;
-    //header($redir);
+
+	search_results($res, $db);
 
 ?>
