@@ -3,65 +3,13 @@ function viewProfile($id, $db)
 {
 ?>
 <div id="profile">
-	<h1>Becky</h1>
-
 	
-	<div class="container">
-		<div class="header"></div>
-		<div id="ca-container" class="ca-container">
-			<div class="ca-wrapper">
-				<div class="ca-item ca-item-1">
-					<div class="ca-item-main">
-						<div class="ca-icon">
-							<img src="http://www.grook.net/sites/default/files/images/kettaneh/student.jpg" alt="">
-						</div>
-					</div>
-				</div>
-				<div class="ca-item ca-item-2">
-					<div class="ca-item-main">
-						<div class="ca-icon">
-							<img src="http://blog.internationalstudent.com/wp-content/uploads/2011/01/student-books.jpg" alt="">
-						</div>
-					</div>
-				</div>
-				<div class="ca-item ca-item-3">
-					<div class="ca-item-main">
-						<div class="ca-icon">
-							<img src="https://hwdsb.elearningontario.ca/images/eLO_Student.jpg" alt="">
-						</div>
-					</div>
-				</div>
-				<div class="ca-item ca-item-4">
-					<div class="ca-item-main">
-						<div class="ca-icon">
-							<img src="https://hwdsb.elearningontario.ca/images/eLO_Student.jpg" alt="">
-						</div>
-					</div>
-				</div>
-				<div class="ca-item ca-item-5">
-					<div class="ca-item-main">
-						<div class="ca-icon">
-							<img src="https://hwdsb.elearningontario.ca/images/eLO_Student.jpg" alt="">
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<p>21, Engineering</p><br>
-	<p>"I'm Becky.  Something something dogs, something something ice cream."</p><br>
-	<form>
-		<input type="Submit" value="Message">
-	</form>
+	<h1>Judy from Fine Arts</h1>
+	<p>21 years old</p>
+	<img src="" alt="">
+	<p>About Judy!</p>
 </div>
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-<script type="text/javascript" src="http://localhost:8888/HookedOnCampus/src/js/cc/js/jquery.easing.1.3.js"></script>
-<!-- the jScrollPane script -->
-<script type="text/javascript" src="http://localhost:8888/HookedOnCampus/src/js/cc/js/jquery.mousewheel.js"></script>
-<script type="text/javascript" src="http://localhost:8888/HookedOnCampus/src/js/cc/js/jquery.contentcarousel.js"></script>
-<script type="text/javascript">
-	$('#ca-container').contentcarousel();
-</script>
+
 <?php
 }
 ?>

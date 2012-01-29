@@ -1,5 +1,5 @@
 .search-result {
-	padding: 1em 1em 1em 1em;
+	padding: 1em 1em 1em 33em;
 	border-top: 0.1em solid gray;
 }
 
@@ -20,10 +20,8 @@
 }
 
 .search-result form {
-	padding-left: 6em;
+	display:inline;
 }
-}
-
 
 #footer {
 	border-top: 0.1em solid #000000;
