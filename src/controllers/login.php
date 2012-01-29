@@ -1,50 +1,27 @@
 <?php
 // start the session
 
+require_once '../utils/DBManager.php';
+
+$db = new DB();
+
 session_start();
 
-echo getcwd().'<br>';
-
-echo 'including';
-//include '../utils/DBManager.php';
-
-echo 'included';
 $username = $_POST['email'];
 $password = $_POST['password'];
 
-echo 'executing select';
+$query = "SELECT id FROM user WHERE email = '$username';";
 
-$user_info = select("select * from user");
-echo 'printing results';
-print_r($user_info);
+$res = $db->db_query($query);
 
-echo $user_info['email'];
+$row = $db->db_fetch($res);
 
+$id = $row['id'];
 
 $_SESSION['auth'] = true;
-//header( 'Location: /HookedOnCampus/profile.php?id=2' ) ;
+$_SESSION['id'] = $id;
 
-
-
- function open()
-    {
-
-        $user="cq7753_test";
-        $password="gamejam";
-        $database="cq7753_hooked";
-
-        mysql_connect('http://www.hookedoncampus.com:2082',$user,$password);
-        @mysql_select_db($database) or die( "Unable to select database");
-
-    }
-    
-    function select($statement)
-    {
-        open();
-        $result = mysql_num_rows($statement);
-        mysql_close();
-        return $result;
-    }
+header( 'Location: /HookedOnCampus/profile.php?id='.$_SESSION['id'] );
 
 ?>
 
