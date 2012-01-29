@@ -36,7 +36,7 @@ function viewMessage($pid, $db)
 		$send_id = $results['sender_id'];
 		$msg = $results['message'];
 		$timestamp = $results['sent'];
-		
+		/*
 		$query2 = 'SELECT firstname FROM user WHERE id = '.$send_id;
 		$res2 = $db->db_query($query2);
 		$results2 = $db->db_fetch($res);
@@ -46,14 +46,15 @@ function viewMessage($pid, $db)
 		$res2 = $db->db_query($query2);
 		$results2 = $db->db_fetch($res);
 		$recname = $results2['firstname'];
+		*/
 		?>
 		<div class="message">
 			<p>From: 
-			<?php echo $sendname;
+			<?php echo $send_id;
 			?>
 			</p>
 			<p>To: 
-			<?php echo $recname;
+			<?php echo $rec_id;
 			?>
 			</p>
 			<p>Message:</p><p> 
