@@ -5,7 +5,7 @@
  * Time: 9:14 AM
  */
 
-    include("./utils/DBManager.php");
+    include("./src/utils/DBManager.php");
 
     $query = 'SELECT firstname, department' +
              'FROM user u, faculty f' +
@@ -14,6 +14,6 @@
 
     $results = select($query, $cols);
 
-    include('.src/views/viewProfile.php');
+    include('./src/views/viewProfile.php');
     
  ?>
