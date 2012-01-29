@@ -24,7 +24,7 @@
 
         ?>
 
-            <form action="./src/controllers/questionaire_controller.php?id=$id;action=add" method="post">
+            <form action="./src/controllers/questionaire_controller.php?id=$id;action=ques" method="post">
                 <?php foreach($category as $cat) {
 
                     {?>
