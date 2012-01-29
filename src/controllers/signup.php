@@ -17,7 +17,7 @@
     mysql_connect(localhost,$username,$password);
     @mysql_select_db($database) or die( "Unable to select database");
 
-    $query = "INSERT INTO contacts VALUES ('','$firstname','$email','$password','$faculty')";
+    $query = "INSERT INTO user VALUES ('','$firstname','$email','$password','$faculty')";
     mysql_query($query);
 
     mysql_close();
