@@ -14,6 +14,6 @@
 
     $results = select($query, $cols);
 
-    include('.src/views/viewProfile.php');
+    include('./src/views/viewProfile.php');
     
  ?>
