@@ -17,10 +17,19 @@
 
 function updateProfile($id, $db)
 {
-    $query1 = 'update user set firstname="'.$_POST['firstname'].'", faculty_id="'.$_POST['faculty'].' where id="'.$id.'";';
-    $db->db_query($query1);
+    $firstname = $db->sanitize($_POST['firstname']);
     
-    $query2 = 'update userattributes set gender="'.$_POST['gender'].'" where user_id="'.$_POST['pid'].'";';
+    
+    $query1 = 'update user set firstname="'.$_POST['firstname'].'", faculty_id="'.$_POST['faculty'].'" where id="'.$id.'";';
+    $db->db_query($query1);
+    //echo $query1;
+    
+    $height = $_POST['height'];
+    $orientation = $_POST['orientation'];
+    
+    
+    
+    $query2 = 'update userattributes set gender="'.$_POST['gender'].'", height_id="'.$height.'", orientation="'.$orientation.'" where user_id="'.$_POST['pid'].'";';
     $db->db_query($query2);
     
     header('Location:../../profile.php?id='.$id);

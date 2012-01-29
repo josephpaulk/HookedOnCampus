@@ -16,9 +16,14 @@ function viewProfile($id, $db)
     $fac = $db -> db_fetch($res);
     
     echo "<div id='profile'>";
+    echo "<div id='bio'>";
     echo '<h1>'.$entry['firstname'].' from '.$fac['department'].'</h1>';
-    echo '<img src="./profile_image/'.$entry['firstname'].'.jpg" alt="">';
-    echo '<p>About '.$entry['firstname'].'</p>';
+    echo '<img src="./profile_image/'.$id.'.jpg" alt="">';
+    $gender = ($entry['gender'] == 'M')? 'he' : 'she';
+    if($entry['height_id'] == 1) { $height = "Short"; } else if($entry['height_id'] == 2) { $height = "Average height"; } else { $height = "Tall"; }
+    echo '<p>About '.$entry['firstname'].' <br>'.$entry['firstname'].' is in '.$fac['department'].' and '.$gender.' is '.$height.' </p>';
+    echo '</div>';
+    
     if( is_user($id) )
     {
         echo "<div id='menu'>";

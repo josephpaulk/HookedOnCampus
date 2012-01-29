@@ -8,3 +8,7 @@
 [29-Jan-2012 13:45:21] PHP Notice:  Undefined index: faculty in /Users/peter/Documents/C410/HookedOnCampus/src/views/profile_view.php on line 61
 [29-Jan-2012 13:45:21] PHP Notice:  Undefined index: height in /Users/peter/Documents/C410/HookedOnCampus/src/views/profile_view.php on line 68
 [29-Jan-2012 13:47:44] PHP Notice:  Undefined index: faculty in /Users/peter/Documents/C410/HookedOnCampus/src/views/profile_view.php on line 61
+[29-Jan-2012 14:04:39] PHP Notice:  Undefined index: department in /Users/peter/Documents/C410/HookedOnCampus/src/views/profile_view.php on line 21
+[29-Jan-2012 14:04:53] PHP Notice:  Undefined index: department in /Users/peter/Documents/C410/HookedOnCampus/src/views/profile_view.php on line 21
+[29-Jan-2012 14:04:59] PHP Notice:  Undefined index: department in /Users/peter/Documents/C410/HookedOnCampus/src/views/profile_view.php on line 21
+[29-Jan-2012 14:05:05] PHP Notice:  Undefined index: department in /Users/peter/Documents/C410/HookedOnCampus/src/views/profile_view.php on line 21
