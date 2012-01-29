@@ -1,9 +1,17 @@
 <?php
-function message_view($id, $db)
+function viewMessage($id, $db)
 {
 ?>
 
-<div id="messages">
+<script>
+	$(function() {
+		$(".dialog-modal").dialog({
+			modal : true
+		});
+	});
+
+</script>
+<div id="messages" class="dialog-modal">
 	<div class="message">
 		<p>Sender</p>
 		<p>Receiver</p>
