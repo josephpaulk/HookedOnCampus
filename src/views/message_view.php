@@ -1,8 +1,8 @@
 <?php
 
-require_once '/src/controllers/message_controller.php';
+require_once './src/utils/db.php';
 
-function viewMessage($id, $db)
+function viewMessage($pid, $db)
 {
 ?>
 
@@ -14,23 +14,51 @@ function viewMessage($id, $db)
 	});
 
 </script>
-<div id="messages" class="dialog-modal">
-	<?php
-	while ($results)
-	{
-		echo '<h1>'.$results['user_id'].'</h1>';
-		$results = $db->$db_fetch($res);
-	}
-	?>
-	<div class="message">
-		<p>Sender</p>
-		<p>Receiver</p>
-		<p>Message</p>
-		<p>Time</p>
-	</div>
-</div>
-
-
 <?php
+	$db = new DB();
+	$id = $_SESSION['id'];
+	$query = 'SELECT * FROM message WHERE receiver_id = '.$id;
+    
+
+	//$query = 'SELECT * FROM message WHERE receiver_id = ;'; //change to dynamic line
+	$res = $db->db_query($query);
+	$results = $db->db_fetch($res);
+	while($results != 0){
+	?>
+
+	<!--<div id="messages" class="dialog-modal">-->
+	<div>
+		<?php
+	
+		
+		$msg_id = $results['id'];
+		$rec_id = $results['receiver_id'];
+		$send_id = $results['sender_id'];
+		$msg = $results['message'];
+		$timestamp = $results['sent'];
+		?>
+		<div class="message">
+			<p>Sender: 
+			<?php echo $send_id;
+			?>
+			</p>
+			<p>Receiver: 
+			<?php echo $rec_id;
+			?>
+			</p>
+			<p>Message:</p><p> 
+			<?php echo $msg;
+			?></p>
+			<p>Time: 
+			<?php echo $timestamp;
+			?></p><br /><br />
+		</div>
+	</div>
+
+
+	<?php
+	$results = $db->db_fetch($res);
+	}
 }
+
 ?>
