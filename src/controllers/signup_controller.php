@@ -35,7 +35,7 @@
     $entry = $db->db_fetch($res);
     
     
-    $redir = 'Location:../../profile.php?id='.$entry['id'];
-    //echo $redir;
+    $redir = 'Location:../../profile.php?id='.$entry['id'].'&action=ques';
+
     header($redir);
 ?>

@@ -20,6 +20,7 @@ switch($action)
         editProfile($pid, $db);
         break;
     case 'ques':
+		viewProfile($pid, $db);
         questionaire_form($pid, $db);
         break;
     default:
