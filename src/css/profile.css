@@ -1,10 +1,22 @@
 #profile {
-	color: #FFFFFF;
+	color: #000000;
 	background: #FFFFFF;
 	background-image: url('../images/background-gradient.jpg');
 	background-repeat: repeat-x;
-	padding-left: 30em;
+	padding-left: 10em;
+	padding-top: 1em;
 	height: 400px;
+}
+#profile #bio {
+	margin-left: 25em;
+	background-color: #FFFFFF;
+	-moz-border-radius: 20px;
+	-webkit-border-radius: 20px;
+	-khtml-border-radius: 20px;
+	border-radius: 20px;
+	padding: 1em;
+	width: 35em;
+	border-bottom: 1px solid gray;
 }
 #profile #menu {
 	background-color: #FFFFFF;

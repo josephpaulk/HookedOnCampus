@@ -1,4 +1,0 @@
-[29-Jan-2012 15:14:46] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /Users/peter/Documents/C410/HookedOnCampus/src/controllers/signup_controller.php:41) in /Users/peter/Documents/C410/HookedOnCampus/src/controllers/signup_controller.php on line 45
-[29-Jan-2012 16:06:49] PHP Notice:  Undefined index: send in /Users/peter/Documents/C410/HookedOnCampus/src/controllers/message_controller.php on line 13
-[29-Jan-2012 16:06:56] PHP Notice:  Undefined index: send in /Users/peter/Documents/C410/HookedOnCampus/src/controllers/message_controller.php on line 13
-[29-Jan-2012 16:07:32] PHP Notice:  Undefined index: send in /Users/peter/Documents/C410/HookedOnCampus/src/controllers/message_controller.php on line 13

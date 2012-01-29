@@ -17,6 +17,7 @@ function viewProfile($id, $db)
     $fac = $db -> db_fetch($res);
     
     echo "<div id='profile'>";
+
     echo "<div id='bio'>";
     echo '<h1>'.$entry['firstname'].' from '.$fac['department'].'</h1>';
     echo '<img src="./profile_image/'.$id.'.jpg" alt="">';
@@ -29,52 +30,46 @@ function viewProfile($id, $db)
         sendMessage($_SESSION['id'], $id);  
      }
     
-   
-        echo "<div id='menu'>";
-        echo "<ul>";
-        echo "<li><a href=''>Edit Profile</a></li>";
-        echo "<li><a href=''>Messages</a></li>";
-        echo "<li><a href=''>Matches</a></li>";
-        echo "<li><a href='search.php'>Search</a></li>";
-        echo "<li><a href='./src/controllers/logout.php'>Logout</a></li>";
-        echo "</ul>";
-        echo "</div>";
-        
-    
-            
+  
+    echo "<div id='menu'>";
+    echo "<ul>";
+    echo "<li><a id='editP' href='#'>Edit Profile</a></li>";
+    echo "<li><a href=''>Messages</a></li>";
+    echo "<li><a href=''>Matches</a></li>";
+    echo "<li><a href='search.php'>Search</a></li>";
+    echo "<li><a href='./src/controllers/logout.php'>Logout</a></li>";
+    echo "</ul>";
     echo "</div>";
-    
-    ?>
-    <script>
-	$(function() {
-		$(".dialog-modal").dialog({
-			modal : true
-		};
-		
-		);
+        
+    echo "</div>";
+	
+   
+
+?>
+<script>
+	$(document).ready(function() {
+		$("#edit").hide();
+		$("#editP").click(function() {
+			$("#edit").show();
+		});
 	});
 
 </script>
 <?php
-    
-    if( is_user($id) )
-    {
-        echo "<div id='edit' class='dialog-modal'>";
-        editProfile($id, $db);
-        echo "</div>";
-    }
-    
-    
-?>
 
+if (is_user($id)) {
+	echo "<div id='edit' class='dialog-modal2'>";
+	editProfile($id, $db);
+	echo "</div>";
+}
+?>
 
 <?php
 }
 ?>
 
 <?php
-function editProfile($id, $db) 
-{
+function editProfile($id, $db) {
 
 	$query = "select * from user u , userattributes ua where u.id='" . $id . "' and u.id = ua.user_id;";
 
