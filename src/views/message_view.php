@@ -1,6 +1,18 @@
 <?php
-/**
- * Written By: Derek
- * Date: 28/01/12
- * Time: 9:18 PM
- */
+function message_view($id, $db)
+{
+?>
+
+<div id="messages">
+	<div class="message">
+		<p>Sender</p>
+		<p>Receiver</p>
+		<p>Message</p>
+		<p>Time</p>
+	</div>
+</div>
+
+
+<?php
+}
+?>

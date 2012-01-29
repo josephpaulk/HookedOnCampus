@@ -8,6 +8,9 @@ function viewProfile($id, $db)
 	<p>21 years old</p>
 	<img src="" alt="">
 	<p>About Judy!</p>
+	<form action='./src/views/message_view.php' method='POST'>
+		<input type="Submit" value="Check Messages">
+	</form>
 </div>
 
 <?php
