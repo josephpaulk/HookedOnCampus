@@ -6,8 +6,8 @@
             <input type="text" value="Password" name="password">
             <input type="Submit" value="Sign In">
         </form>
-    <?php }
-
+    <?php
+    }
     else
     {
 

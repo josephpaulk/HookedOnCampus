@@ -16,8 +16,6 @@ $password = $_POST['password'];
 
 $query = "SELECT id, firstname FROM user WHERE email = '$username';";
 
-echo $query;
-
 $res = $db->db_query($query);
 
 $row = $db->db_fetch($res);
