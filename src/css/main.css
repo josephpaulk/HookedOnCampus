@@ -1,9 +1,10 @@
 #header {
 	background-color: #1E1E1E;
 	padding: 2em 6em 2em 6em;
+	border-bottom: 0.2em solid #1F1F1F;
 }
 #header h1 {
-	color: #C81414;
+	color: #FFFFFF;
 	font-size: 2em;
 	float: left;
 	width: 50%;
@@ -14,20 +15,24 @@
 }
 #signup {
 	padding: 2em 6em 2em 6em;
-	background-color: #1E1E1E;
+	background-color: #5C5C5C;
 	width: auto;
 	height: 20%;
 }
 #signup #signup-left {
 	float: left;
 	width: 50%;
-	background: blue;
 }
 #signup #signup-right {
 	float: left;
 	width: 50%;
 	display: inline;
-	background: red;
+	background: #FFFFFF;
+	-moz-border-radius: 20px;
+	-webkit-border-radius: 20px;
+	-khtml-border-radius: 20px;
+	border-radius: 20px;
+	padding: 1em 1em 1em 1em;
 }
 #signup #signup-left h1 {
 	font-size: 2em;
