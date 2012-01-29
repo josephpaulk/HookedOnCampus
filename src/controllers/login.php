@@ -14,6 +14,7 @@ $db = new DB();
 $username = $_POST['email'];
 $password = $_POST['password'];
 
+//TODO:Need to add password authentication
 $query = "SELECT id, firstname FROM user WHERE email = '$username';";
 
 $res = $db->db_query($query);
