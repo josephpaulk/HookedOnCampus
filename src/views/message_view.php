@@ -17,9 +17,10 @@ function viewMessage($pid, $db)
 <?php
 	$db = new DB();
 	$id = $_SESSION['id'];
-	//$query = 'SELECT * FROM messages WHERE received_id = '.$id;
+	$query = 'SELECT * FROM message WHERE receiver_id = '.$id;
+    
 
-	$query = 'SELECT * FROM message WHERE receiver_id = 2;'; //change to dynamic line
+	//$query = 'SELECT * FROM message WHERE receiver_id = ;'; //change to dynamic line
 	$res = $db->db_query($query);
 	$results = $db->db_fetch($res);
 	while($results != 0){
