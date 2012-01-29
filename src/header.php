@@ -9,6 +9,9 @@
 
 <html>
 	<head>
+		<!-- jQuery -->
+		<script type="text/javascript" src="http://localhost:8888/HookedOnCampus/src/jqueryui/js/jquery.js"></script>  
+		<script type="text/javascript" src="http://localhost:8888/HookedOnCampus/src/jqueryui/js/jquery-ui.js"></script>  
 		<!-- CSS -->
 		<link rel='stylesheet' type='text/css' href='http://localhost:8888/HookedOnCampus/src/css/reset.css'>
 		<link rel='stylesheet' type='text/css' href='http://localhost:8888/HookedOnCampus/src/css/header.css'>
