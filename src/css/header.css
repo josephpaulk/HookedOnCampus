@@ -1,6 +1,9 @@
 #header {
 	background-color: #a4d5e6;
 	padding: 2em 6em 2em 6em;
+	background-image: url('../images/logo.png');
+	background-repeat: no-repeat;
+	height: 70px;
 }
 #header a {
 	text-decoration: none;

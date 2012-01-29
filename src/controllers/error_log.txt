@@ -8,3 +8,6 @@
 [29-Jan-2012 22:47:00] PHP Notice:  Undefined variable: _SESSION in C:\wamp\www\HookedOnCampus\src\controllers\questionaire_controller.php on line 16
 [29-Jan-2012 22:47:00] PHP Stack trace:
 [29-Jan-2012 22:47:00] PHP   1. {main}() C:\wamp\www\HookedOnCampus\src\controllers\questionaire_controller.php:0
+[29-Jan-2012 23:01:02] PHP Notice:  Undefined variable: _SESSION in C:\wamp\www\HookedOnCampus\src\controllers\questionaire_controller.php on line 16
+[29-Jan-2012 23:01:02] PHP Stack trace:
+[29-Jan-2012 23:01:02] PHP   1. {main}() C:\wamp\www\HookedOnCampus\src\controllers\questionaire_controller.php:0

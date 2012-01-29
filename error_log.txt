@@ -16,3 +16,6 @@
 [29-Jan-2012 15:02:54] PHP Warning:  Cannot modify header information - headers already sent by (output started at /Users/peter/Documents/C410/HookedOnCampus/src/utils/auth.php:11) in /Users/peter/Documents/C410/HookedOnCampus/src/utils/auth.php on line 13
 [29-Jan-2012 15:06:24] PHP Notice:  Undefined index: auth in /Users/peter/Documents/C410/HookedOnCampus/src/utils/auth.php on line 11
 [29-Jan-2012 15:06:24] PHP Warning:  Cannot modify header information - headers already sent by (output started at /Users/peter/Documents/C410/HookedOnCampus/src/utils/auth.php:11) in /Users/peter/Documents/C410/HookedOnCampus/src/utils/auth.php on line 13
+[29-Jan-2012 22:49:49] PHP Notice:  Undefined index: id in C:\wamp\www\HookedOnCampus\profile.php on line 25
+[29-Jan-2012 22:49:49] PHP Stack trace:
+[29-Jan-2012 22:49:49] PHP   1. {main}() C:\wamp\www\HookedOnCampus\profile.php:0

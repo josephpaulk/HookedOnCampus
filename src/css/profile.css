@@ -3,8 +3,12 @@
 	background: #FFFFFF;
 	background-image: url('../images/background-gradient.jpg');
 	background-repeat: repeat-x;
-	padding-left: 30em;
+	padding-left: 10em;
+	padding-top: 1em;
 	height: 400px;
+}
+#profile #bio {
+	margin-left: 25em;
 }
 #profile #menu {
 	background-color: #FFFFFF;
