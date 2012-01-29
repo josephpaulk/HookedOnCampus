@@ -12,7 +12,10 @@
     {
 
         echo 'Hello, ' . $_SESSION['firstname'];
+        ?> <form action="./src/controllers/logout.php" method="post">
+            <input type="submit" value"Log Out">
+        </form>
 
-    } ?>
+    <?php } ?>
 
 </div>

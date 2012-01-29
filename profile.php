@@ -1,4 +1,11 @@
 <?php
+
+//login stuff
+    session_start();
+
+    if(!isset($_SESSION['auth']))
+        $_SESSION['auth'] = false;
+
 require_once './src/views/profile_view.php';
 require_once './src/views/questionaire_view.php';
 require_once './src/utils/db.php';

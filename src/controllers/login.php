@@ -25,7 +25,7 @@ $_SESSION['auth'] = true;
 $_SESSION['id'] = $row['id'];
 $_SESSION['firstname'] = $row['firstname'];
 
-header( 'Location: /HookedOnCampus/profile.php?id='.$_SESSION['id'] );
+header( 'Location: /profile.php?id='.$_SESSION['id'] );
 
 ?>
 
