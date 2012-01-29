@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 3.4.9
+-- version 3.4.7.1
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jan 28, 2012 at 11:31 PM
--- Server version: 5.5.20
--- PHP Version: 5.3.9
+-- Generation Time: Jan 28, 2012 at 06:07 PM
+-- Server version: 5.1.56
+-- PHP Version: 5.2.6
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Database: `hooked`
+-- Database: `cq7753_hooked`
 --
 
 -- --------------------------------------------------------
@@ -157,7 +157,14 @@ CREATE TABLE IF NOT EXISTS `user` (
   `faculty_id` int(8) DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `faculty` (`faculty_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+
+--
+-- Dumping data for table `user`
+--
+
+INSERT INTO `user` (`id`, `firstname`, `email`, `password`, `faculty_id`) VALUES
+(2, 'test', 'test@test.com', 'test', 1);
 
 -- --------------------------------------------------------
 

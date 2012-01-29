@@ -6,7 +6,7 @@ class DB
 	{
 		$this->user = 'admin';
 		$this->url = 'localhost';
-		$this->pass = 'hobo1234';
+		$this->pass = '';
 		$this->connect();
 	}
 	
