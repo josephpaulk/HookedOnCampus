@@ -6,15 +6,14 @@
         <form action="signup" method="post">
         <input type="text" value="@ualberta.ca Email" name="email">
         <input type="text" value="First Name" name="firstname">
-        <input type="text" value="Faculty" name="faculty">
-        <select>
+        <select name="faculty">
             <?php //foreach(SELECT)?>
         	<option value="1">Science</option>
         	<option value="2">Arts</option>
             <option value="3">Engineering</option>
         </select>
         <input type="text" value="Password" name="password">
-        <input type="Sign Up">
+        <input type="Submit" value="Sign On">
     </form>
     </div>
 </div>
