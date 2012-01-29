@@ -1,0 +1,13 @@
+#header #login input {
+	-moz-border-radius: 0.2em;
+	-webkit-border-radius: 0.2em;
+	-khtml-border-radius: 0.2em;
+	border-radius: 0.4em;
+	padding: 0.4em;
+	color: #646464;
+}
+#header #login input:focus {
+	outline: none;
+	border-color: #9ecaed;
+	box-shadow: 0 0 10px #9ecaed;
+}

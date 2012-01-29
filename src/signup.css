@@ -1,0 +1,43 @@
+#signup {
+	color: #FFFFFF;
+	background: #FFFFFF;
+	background-image: url('../images/background-gradient.jpg');
+	background-repeat: repeat-x;
+	padding-left: 10em;
+	padding-top: 1em;
+	height: 400px;
+}
+#signup #signup-left {
+	float: left;
+	width: auto;
+}
+#signup #signup-left h1 {
+	font-size: 2em;
+}
+#signup #signup-right {
+	float: right;
+	width: auto;
+	background-color: #FFFFFF;
+	-moz-border-radius: 1em;
+	-webkit-border-radius: 1em;
+	-khtml-border-radius: 1em;
+	border-radius: 1em;
+	padding: 1em 6em 1em 1em;
+	margin-right: 40%;
+}
+#signup #signup-right label {
+	color: #000000;
+	font-family: 'Glegoo', Georgia, Times, serif;
+	font-size: 1.5em;
+}
+#signup #signup-right input {
+	color: #000000;
+}
+#questionaire {
+	padding: 2em;
+	background-color: #FFFFFF;
+	border: 0.1em solid black;
+	-moz-border-radius: 1em;
+	-webkit-border-radius: 1em;
+	-khtml-border-radius: 1em;
+}

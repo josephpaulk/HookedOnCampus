@@ -17,7 +17,16 @@ function viewProfile($id, $db)
     $fac = $db -> db_fetch($res);
     
     echo "<div id='profile'>";
-
+  
+    echo "<div id='menu'>";
+    echo "<ul>";
+    echo "<li><a id='editP' href='#'>Edit Profile</a></li>";
+    echo "<li><a href=''>Messages</a></li>";
+    echo "<li><a href=''>Matches</a></li>";
+    echo "<li><a href='search.php'>Search</a></li>";
+    echo "<li><a href='./src/controllers/logout.php'>Logout</a></li>";
+    echo "</ul>";
+    echo "</div>";
     echo "<div id='bio'>";
     echo '<h1>'.$entry['firstname'].' from '.$fac['department'].'</h1>';
     echo '<img src="./profile_image/'.$id.'.jpg" alt="">';
@@ -30,16 +39,7 @@ function viewProfile($id, $db)
         sendMessage($_SESSION['id'], $id);  
      }
     
-  
-    echo "<div id='menu'>";
-    echo "<ul>";
-    echo "<li><a id='editP' href='#'>Edit Profile</a></li>";
-    echo "<li><a href=''>Messages</a></li>";
-    echo "<li><a href=''>Matches</a></li>";
-    echo "<li><a href='search.php'>Search</a></li>";
-    echo "<li><a href='./src/controllers/logout.php'>Logout</a></li>";
-    echo "</ul>";
-    echo "</div>";
+
         
     echo "</div>";
 	
