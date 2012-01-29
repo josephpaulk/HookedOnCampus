@@ -18,7 +18,7 @@
         $password="gamejam";
         $database="cq7753_hooked";
 
-        mysql_connect('www.hookedoncampus.com:2082',$user,$password);
+        mysql_connect(localhost,$user,$password);
         @mysql_select_db($database) or die( "Unable to select database");
 
     }
