@@ -1,3 +1,9 @@
+<?php
+
+    session_start();
+
+    $_SESSION['auth'] = false; ?>
+
 <html>
 	<head>
 		<link rel='stylesheet' type='text/css' href='http://localhost:8888/HookedOnCampus/src/css/reset.css'>

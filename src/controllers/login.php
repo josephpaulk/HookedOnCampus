@@ -1,25 +1,30 @@
 <?php
-// start the session
 
-require_once '../utils/DBManager.php';
+    ini_set('display_errors', 1);
+    ini_set('log_errors', 1);
+    ini_set('error_log', dirname(__FILE__) . '/error_log.txt');
+    error_reporting(E_ALL);
+
+
+
+require_once '../utils/db.php';
 
 $db = new DB();
-
-session_start();
 
 $username = $_POST['email'];
 $password = $_POST['password'];
 
-$query = "SELECT id FROM user WHERE email = '$username';";
+$query = "SELECT id, firstname FROM user WHERE email = '$username';";
+
+echo $query;
 
 $res = $db->db_query($query);
 
 $row = $db->db_fetch($res);
 
-$id = $row['id'];
-
 $_SESSION['auth'] = true;
-$_SESSION['id'] = $id;
+$_SESSION['id'] = $row['id'];
+$_SESSION['firstname'] = $row['firstname'];
 
 header( 'Location: /HookedOnCampus/profile.php?id='.$_SESSION['id'] );
 
