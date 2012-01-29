@@ -25,9 +25,8 @@
         ?>
 
             <form action="./src/controllers/questionaire_controller.php?id=$id;action=ques" method="post">
-                <?php foreach($category as $cat) {
+                <?php foreach($category as $cat) {?>
 
-                    {?>
                         <select name="<?php $cat  ?>">
                             <option value="0"><?php echo $questions[$cat]; ?></option>
                             <option value="5">Very Often</option>
@@ -41,9 +40,5 @@
             </form>
 
         <?php
-
-
     }
-
-
 ?>
