@@ -28,7 +28,7 @@ function viewProfile($id, $db)
     {
         echo "<div id='menu'>";
         echo "<ul>";
-        echo "<li><a href=''>Edit Profile</a></li>";
+        echo "<li><a id='editP' href='#'>Edit Profile</a></li>";
         echo "<li><a href=''>Messages</a></li>";
         echo "<li><a href=''>Matches</a></li>";
         echo "<li><a href='search.php'>Search</a></li>";
@@ -40,37 +40,32 @@ function viewProfile($id, $db)
             
     echo "</div>";
     
-    ?>
-    <script>
-	$(function() {
-		$(".dialog-modal").dialog({
-			modal : true
-		};
-		
-		);
+
+?>
+<script>
+	$(document).ready(function() {
+		$("#edit").hide();
+		$("#editP").click(function() {
+			$("#edit").show();
+		});
 	});
 
 </script>
 <?php
-    
-    if( is_user($id) )
-    {
-        echo "<div id='edit' class='dialog-modal'>";
-        editProfile($id, $db);
-        echo "</div>";
-    }
-    
-    
-?>
 
+if (is_user($id)) {
+	echo "<div id='edit' class='dialog-modal2'>";
+	editProfile($id, $db);
+	echo "</div>";
+}
+?>
 
 <?php
 }
 ?>
 
 <?php
-function editProfile($id, $db) 
-{
+function editProfile($id, $db) {
 
 	$query = "select * from user u , userattributes ua where u.id='" . $id . "' and u.id = ua.user_id;";
 

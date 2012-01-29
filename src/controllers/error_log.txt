@@ -1,1 +1,10 @@
 [29-Jan-2012 15:14:46] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /Users/peter/Documents/C410/HookedOnCampus/src/controllers/signup_controller.php:41) in /Users/peter/Documents/C410/HookedOnCampus/src/controllers/signup_controller.php on line 45
+[29-Jan-2012 22:42:08] PHP Notice:  Undefined variable: _SESSION in C:\wamp\www\HookedOnCampus\src\controllers\questionaire_controller.php on line 16
+[29-Jan-2012 22:42:08] PHP Stack trace:
+[29-Jan-2012 22:42:08] PHP   1. {main}() C:\wamp\www\HookedOnCampus\src\controllers\questionaire_controller.php:0
+[29-Jan-2012 22:46:22] PHP Notice:  Undefined variable: _SESSION in C:\wamp\www\HookedOnCampus\src\controllers\questionaire_controller.php on line 16
+[29-Jan-2012 22:46:22] PHP Stack trace:
+[29-Jan-2012 22:46:22] PHP   1. {main}() C:\wamp\www\HookedOnCampus\src\controllers\questionaire_controller.php:0
+[29-Jan-2012 22:47:00] PHP Notice:  Undefined variable: _SESSION in C:\wamp\www\HookedOnCampus\src\controllers\questionaire_controller.php on line 16
+[29-Jan-2012 22:47:00] PHP Stack trace:
+[29-Jan-2012 22:47:00] PHP   1. {main}() C:\wamp\www\HookedOnCampus\src\controllers\questionaire_controller.php:0

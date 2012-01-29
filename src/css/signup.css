@@ -31,3 +31,11 @@
 #signup #signup-right input {
 	color: #000000;
 }
+#questionaire { 
+    padding: 2em;
+	background-color: #FFFFFF;
+	border: 0.1em solid black;
+	-moz-border-radius: 1em;
+	-webkit-border-radius: 1em;
+	-khtml-border-radius: 1em;
+}
