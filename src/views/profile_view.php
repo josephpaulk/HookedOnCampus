@@ -1,13 +1,19 @@
-<?
-
+<?php
 function viewProfile($id, $db)
 {
-  echo 'View Profile'.$id;
-        
+    $name = 
+?>
+<div id='name'>
+    
+</div>
+<?php        
 }
 
 
 function editProfile($id, $db)
 {
-    echo 'Edit Profile';
+    echo 'Edit Profile '.$id;
+    
 }
+
+?>

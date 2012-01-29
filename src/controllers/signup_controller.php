@@ -35,6 +35,7 @@
     $entry = $db->db_fetch($res);
     
     
-    
-    header("Location: ../../profile.php?id=$entry['id'];action=view");
+    $redir = 'Location:../../profile.php?id='.$entry['id'];
+    //echo $redir;
+    header($redir);
 ?>
