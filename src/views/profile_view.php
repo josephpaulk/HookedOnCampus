@@ -40,9 +40,22 @@ function viewProfile($id, $db)
             
     echo "</div>";
     
+    ?>
+    <script>
+	$(function() {
+		$(".dialog-modal").dialog({
+			modal : true
+		};
+		
+		);
+	});
+
+</script>
+<?php
+    
     if( is_user($id) )
     {
-        echo "<div id='edit'>";
+        echo "<div id='edit' class='dialog-modal'>";
         editProfile($id, $db);
         echo "</div>";
     }
