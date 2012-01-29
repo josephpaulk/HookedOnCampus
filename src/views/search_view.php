@@ -67,6 +67,37 @@ function search_form()
 			height.
             <input type="Submit" value="Search">
         </form>
+        
+        
+        <div id="results">
+        	<div class="search-result">
+        		<img src="" alt="">
+        		<h1>Judy from Fine Arts</h1>
+        		<p>23 years old</p><br>
+        		<p>Hi, I'm Judy.  I like finishing Mortal Kombat with one hand.</p><br>
+        		<form>
+        			<input type="Submit" value="Message!">
+        		</form>
+        	</div>
+        	<div class="search-result">
+        		<img src="" alt="">
+        		<h1>Judy from Fine Arts</h1>
+        		<p>19 years old</p><br>
+        		<p>Hi, I'm Judy.  I like finishing Mortal Kombat with one hand.</p><br>
+        		<form>
+        			<input type="Submit" value="Message!">
+        		</form>
+        	</div>
+        	<div class="search-result">
+        		<img src="" alt="">
+        		<h1>Judy from Fine Arts</h1>
+        		<p>20 years old</p><br>
+        		<p>Hi, I'm Judy.  I like finishing Mortal Kombat with one hand.</p><br>
+        		<form>
+        			<input type="Submit" value="Message!">
+        		</form>
+        	</div>
+        </div>
     
     <?php
 }
