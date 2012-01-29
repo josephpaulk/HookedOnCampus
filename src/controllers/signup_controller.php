@@ -26,6 +26,8 @@
     
     $query = "INSERT INTO user (firstname, email,password, faculty_id) VALUES ('$firstname','$email','$password','$faculty');";
     
+    
+    
     $db->db_query($query);
     
     $query = "SELECT id FROM user WHERE email = '$email'";
@@ -34,6 +36,18 @@
     
     $entry = $db->db_fetch($res);
     
+    $queryatt = "INSERT INTO userattributes value('".$entry['id']."', 'M', 1, 1, 'S', 1, 'JAN-1-1988', 1);";
+    
+    $db->db_query($queryatt);
+    
+    if(!isset($_SESSION))
+    {
+        session_start();
+    }
+    
+    $_SESSION['auth'] = true;
+    $_SESSION['id'] = $entry['id'];
+    $_SESSION['firstname'] = $firstname;
     
     $redir = 'Location:../../profile.php?id='.$entry['id'].'&action=ques';
 

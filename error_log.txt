@@ -12,3 +12,7 @@
 [29-Jan-2012 14:04:53] PHP Notice:  Undefined index: department in /Users/peter/Documents/C410/HookedOnCampus/src/views/profile_view.php on line 21
 [29-Jan-2012 14:04:59] PHP Notice:  Undefined index: department in /Users/peter/Documents/C410/HookedOnCampus/src/views/profile_view.php on line 21
 [29-Jan-2012 14:05:05] PHP Notice:  Undefined index: department in /Users/peter/Documents/C410/HookedOnCampus/src/views/profile_view.php on line 21
+[29-Jan-2012 15:02:54] PHP Notice:  Undefined index: auth in /Users/peter/Documents/C410/HookedOnCampus/src/utils/auth.php on line 11
+[29-Jan-2012 15:02:54] PHP Warning:  Cannot modify header information - headers already sent by (output started at /Users/peter/Documents/C410/HookedOnCampus/src/utils/auth.php:11) in /Users/peter/Documents/C410/HookedOnCampus/src/utils/auth.php on line 13
+[29-Jan-2012 15:06:24] PHP Notice:  Undefined index: auth in /Users/peter/Documents/C410/HookedOnCampus/src/utils/auth.php on line 11
+[29-Jan-2012 15:06:24] PHP Warning:  Cannot modify header information - headers already sent by (output started at /Users/peter/Documents/C410/HookedOnCampus/src/utils/auth.php:11) in /Users/peter/Documents/C410/HookedOnCampus/src/utils/auth.php on line 13
