@@ -1,9 +1,22 @@
 <?php
+    require_once './src/views/search_view.php';
+    
+    include('./src/header.php');
+    
+    search_form();
+   
+    include('./src/footer.php');
+	
+/* OLD CODE
 require_once './src/views/search_view.php';
+require_once './src/utils/db.php';
 
 include ('./src/header.php');
 
 $action = $_GET['action'];
+
+$db = new DB();
+$pid = "";
 
 switch($action)
 {
@@ -18,5 +31,5 @@ switch($action)
 
 include ('./src/footer.php');
 
-
+*/
 ?>
