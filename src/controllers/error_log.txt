@@ -1,0 +1,3 @@
+[29-Jan-2012 01:36:46] PHP Fatal error:  Class 'DB' not found in /Users/peter/Documents/C410/HookedOnCampus/src/controllers/profile_controller.php on line 8
+[29-Jan-2012 01:37:15] PHP Notice:  Undefined variable: id in /Users/peter/Documents/C410/HookedOnCampus/src/controllers/profile_controller.php on line 15
+[29-Jan-2012 01:37:15] PHP Notice:  Undefined variable: query2 in /Users/peter/Documents/C410/HookedOnCampus/src/controllers/profile_controller.php on line 25
