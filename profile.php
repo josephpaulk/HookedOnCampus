@@ -6,6 +6,7 @@ is_auth();
 
 require_once './src/views/profile_view.php';
 require_once './src/views/questionaire_view.php';
+require_once './src/views/message_view.php';
 require_once './src/utils/db.php';
 
 include ('./src/header.php');
@@ -28,6 +29,9 @@ switch($action)
 		viewProfile($pid, $db);
         questionaire_form($pid, $db);
         break;
+	case 'mesg':
+		viewMessage($pid, $db);
+		break;
     default:
         viewProfile($pid, $db);
         break;
