@@ -1,14 +1,22 @@
 <?php
+require_once './src/views/profile_view.php';
 
 include ('./src/header.php');
+
     
-// This can be include of profile controller    
-?>
+$pid = $_GET['id'];
+$action = $_GET['action'];
 
-<h1>You're Viewing Profile <? echo $_GET['id']; ?></h1>
-
-
-<?php  
+switch($action)
+{
+    case 'edit':
+        profile_edit($id, $db);
+        break;
+    default:
+        profile_view($id, $db);
+        break;
+        
+}
     
 include ('./src/footer.php');
 

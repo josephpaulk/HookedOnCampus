@@ -4,9 +4,9 @@ class DB
 	private $url, $user, $pass;
 	function __construct()
 	{
-		$this->user = 'admin';
+		$this->user = 'tori';
 		$this->url = 'localhost';
-		$this->pass = '';
+		$this->pass = 'fuckyougit';
 		$this->connect();
 	}
 	
