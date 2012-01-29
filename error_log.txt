@@ -1,0 +1,7 @@
+[29-Jan-2012 11:54:46] PHP Warning:  require_once(/src/controllers/message_controller.php) [<a href='function.require-once'>function.require-once</a>]: failed to open stream: No such file or directory in /Users/peter/Documents/C410/HookedOnCampus/src/views/message_view.php on line 3
+[29-Jan-2012 11:54:46] PHP Fatal error:  require_once() [<a href='function.require'>function.require</a>]: Failed opening required '/src/controllers/message_controller.php' (include_path='.:/Applications/MAMP/bin/php/php5.3.6/lib/php') in /Users/peter/Documents/C410/HookedOnCampus/src/views/message_view.php on line 3
+[29-Jan-2012 12:11:31] PHP Notice:  Undefined index: faculty in /Users/peter/Documents/C410/HookedOnCampus/src/views/profile_view.php on line 21
+[29-Jan-2012 12:30:20] PHP Fatal error:  Call to undefined function check_auth() in /Users/peter/Documents/C410/HookedOnCampus/index.php on line 11
+[29-Jan-2012 12:33:18] PHP Notice:  Undefined index: id in /Users/peter/Documents/C410/HookedOnCampus/profile.php on line 21
+[29-Jan-2012 12:34:15] PHP Notice:  Undefined index: id in /Users/peter/Documents/C410/HookedOnCampus/profile.php on line 25
+[29-Jan-2012 12:34:23] PHP Notice:  Undefined index: id in /Users/peter/Documents/C410/HookedOnCampus/profile.php on line 25

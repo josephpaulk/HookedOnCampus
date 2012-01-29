@@ -1,17 +1,53 @@
 <?php
 function viewProfile($id, $db)
 {
-?>
-<div id="profile">
-	
-	<h1>Judy from Fine Arts</h1>
-	<p>21 years old</p>
-	<img src="" alt="">
-	<p>About Judy!</p>
-	<form action='./src/controllers/profile_controller.php?action=mesg' method='POST'>
-		<input type="Submit" value="Check Messages">
-	</form>
+    $query = "select * from user u , userattributes ua where u.id='" . $id . "' and u.id = ua.user_id;";
+   
+
+    $res = $db -> db_query($query);
+
+    $entry = $db -> db_fetch($res);
+    
+    $queryFac = 'select department from faculty where id = \''.$entry['faculty_id'].'\'';
+    
+    
+    $res = $db -> db_query($queryFac);
+
+    $fac = $db -> db_fetch($res);
+    
+    echo "<div id='profile'>";
+    echo '<h1>'.$entry['firstname'].' from '.$fac['department'].'</h1>';
+    echo '<img src="" alt="">';
+    echo '<p>About '.$entry['firstname'].'</p>';
+    if( is_user($id) )
+    {
+        echo "<div id='menu'>";
+        echo "<a href=''>Messages</a> | ";
+        echo "<a href=''>Matches</a> | ";
+        echo "<a href=''>Search</a> | ";
+        echo "<a href='../views/logout.php'>Logout</a>";
+        echo "</div>";
+        
+    }
+            
+    echo "</div>";
+    
+    /*
+     * <div id="profile">
+    
+    <h1>Judy from Fine Arts</h1>
+    <p>21 years old</p>
+    <img src="" alt="">
+    <p>About Judy!</p>
+    <form action='./src/controllers/profile_controller.php?action=mesg' method='POST'>
+        <input type="Submit" value="Check Messages">
+    </form>
 </div>
+     */
+    
+    
+?>
+
 
 <?php
 }
