@@ -1,5 +1,6 @@
 <?php
 require_once './src/views/profile_view.php';
+require_once './src/views/questionaire_view.php';
 require_once './src/utils/db.php';
 
 include ('./src/header.php');
@@ -17,6 +18,9 @@ switch($action)
 {
     case 'edit':
         editProfile($pid, $db);
+        break;
+    case 'ques':
+        questionaire_form($pid, $db);
         break;
     default:
         viewProfile($pid, $db);
