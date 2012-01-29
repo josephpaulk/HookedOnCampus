@@ -4,6 +4,7 @@
 
 function is_auth()
 {
+    
     if(!isset($_SESSION))
         session_start();
 	
@@ -16,6 +17,8 @@ function is_auth()
 
 function check_auth()
 {
+    if(!isset($_SESSION))
+        session_start();
     if (!isset($_SESSION['auth']) || !$_SESSION['auth'] || !isset($_SESSION))
     {
       return false;
@@ -23,9 +26,11 @@ function check_auth()
     return true;
 }
 
-function authorize_user($id)
+function is_user($id)
 {
-    
+    if(!isset($_SESSION['id']) || $_SESSION['id'] != $id)
+        return false;
+    return true;   
 }
 
 
