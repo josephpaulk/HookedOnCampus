@@ -7,7 +7,6 @@
 
 
 
-
     /**
      * Opens a new db connection.
      */
@@ -18,9 +17,17 @@
         $password="gamejam";
         $database="cq7753_hooked";
 
-        mysql_connect('www.hookedoncampus.com:2082',$user,$password);
+        mysql_connect('http://www.hookedoncampus.com:2082',$user,$password);
         @mysql_select_db($database) or die( "Unable to select database");
 
+    }
+    
+    function select($statement)
+    {
+        open();
+        $result = mysql_num_rows($statement);
+        mysql_close();
+        return $result;
     }
 
     /**
