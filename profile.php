@@ -1,6 +1,8 @@
 <?php
 
-//login stuff
+require_once './src/utils/auth.php';
+
+is_auth();
 
 require_once './src/views/profile_view.php';
 require_once './src/views/questionaire_view.php';

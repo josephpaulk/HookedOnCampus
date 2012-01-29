@@ -5,8 +5,11 @@
  * Time: 12:35 PM
  */
 
-    $_SESSION['auth'] = false;
+    unset($_SESSION['auth']);
     unset($_SESSION['id']);
     unset($_SESSION['firstname']);
+    session_destroy();
+
+    header('Location: ../../index.php');
 
 ?>

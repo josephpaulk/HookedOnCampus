@@ -1,7 +1,3 @@
-<?php
-    session_start();
-    if(!$_SESSION[auth])
-?>
 <html>
 	<head>
 		<!-- jQuery -->
@@ -23,6 +19,6 @@
 		<div id="header">
 			<a href="http://www.hookedoncampus.com" alt=""><h1>HookedOnCampus</h1></a>
 			<?php
-			include ("views/login.php");
+			     include ("views/login.php");
 			?>
 		</div>
