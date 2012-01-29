@@ -1,5 +1,8 @@
 <div id="login">
-    <?php if(!$_SESSION['auth'])
+
+    <?php
+    echo $_SESSION['auth'];
+    if(!$_SESSION['auth'])
     {?>
         <form action="./src/controllers/login.php" method="post">
             <input type="text" value="@ualberta.ca" name="email">
