@@ -17,7 +17,7 @@ function viewProfile($id, $db)
     
     echo "<div id='profile'>";
     echo '<h1>'.$entry['firstname'].' from '.$fac['department'].'</h1>';
-    echo '<img src="" alt="">';
+    echo '<img src="./profile_image/'.$entry['firstname'].'.jpg" alt="">';
     echo '<p>About '.$entry['firstname'].'</p>';
     if( is_user($id) )
     {
