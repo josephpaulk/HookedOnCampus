@@ -16,13 +16,19 @@ function editProfile($id, $db)
     
     echo $query;
     
-    //$res = $db->debug_query($query);
-        
+    $res = $db->debug_query($query);
+    
+    $entry = $db->db_fetch($res);
+    print_r($entry);
+    
+    if(count == 1)
+        //$profile = $db->debug_fetch($res);
+    
     
     echo "<form action='./src/controllers/profile_controller.php?action=upd' method='POST'>";
     echo "<center>";
     echo "<table>";
-    echo '<tr><td>First Name:</td><td><input type="text" name="name" /></td></tr>';
+    echo '<tr><td>First Name:</td><td><input type="text" name="name" value="Fred"/></td></tr>';
     echo '<tr><td>Faculty: </td><td><select name="faculty">
                                     <option value="1">Science</option>
                                     <option value="2">Art</option>
