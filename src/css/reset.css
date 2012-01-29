@@ -32,13 +32,3 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-
-
-
-.ui-jcoverflip {
-	position: relative;
-}
-.ui-jcoverflip--item {
-	position: absolute;
-	display: block;
-}

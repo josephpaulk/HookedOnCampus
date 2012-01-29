@@ -1,0 +1,32 @@
+.search-result {
+	padding: 1em 1em 1em 1em;
+	border-top: 0.1em solid gray;
+}
+
+.search-result img {
+	width: 75px;
+	height: 75px;
+	border: 0.1em solid gray;
+	float: left;
+}
+
+.search-result h1 {
+	padding-left: 3em;
+	font-size: 2em;
+}
+
+.search-result p {
+	padding-left: 6em;
+}
+
+.search-result form {
+	padding-left: 6em;
+}
+}
+
+
+#footer {
+	border-top: 0.1em solid #000000;
+	background-color: #646464;
+	height: 100%;
+}
