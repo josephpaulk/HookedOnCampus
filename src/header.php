@@ -17,7 +17,7 @@
 	</head>
 	<body>
 		<div id="header">
-			<a href="http://www.hookedoncampus.com" alt=""><h1>HookedOnCampus</h1></a>
+			<a href="index.php" alt=""><h1>HookedOnCampus</h1></a>
 			<?php
 			     include ("views/login.php");
 			?>
