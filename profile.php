@@ -10,10 +10,10 @@ $action = $_GET['action'];
 switch($action)
 {
     case 'edit':
-        profile_edit($id, $db);
+        editProfile($pid, $db);
         break;
     default:
-        profile_view($id, $db);
+        viewProfile($pid, $db);
         break;
         
 }
