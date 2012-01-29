@@ -7,9 +7,13 @@
 
     include("./utils/DBManager.php");
 
-    $query = 'SELECT firstname, department, gender, haircolor';
-    $cols = "";
+    $query = 'SELECT firstname, department' +
+             'FROM user u, faculty f' +
+             'WHERE u.faculty_id = f.id;';
+    $cols = array('firstname','department');
 
-    select($query, $cols);
+    $results = select($query, $cols);
+
+    include('.src/views/viewProfile.php');
     
  ?>
