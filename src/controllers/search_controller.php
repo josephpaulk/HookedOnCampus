@@ -63,12 +63,13 @@
 	}
 	$query.=')';
 
-    $res = $db->db_query($query);
+    //$res = $db->db_query($query);
     
-    $entry = $db->db_fetch($res);
+    //$entry = $db->db_fetch($res);
     
     
-    $redir = 'Location:../../profile.php?id='.$entry['user_id'];
-    //echo $redir;
-    header($redir);
+    //$redir = 'Location:../../profile.php?id='.$entry['user_id'];
+      //echo $redir;
+    //header($redir);
+
 ?>
